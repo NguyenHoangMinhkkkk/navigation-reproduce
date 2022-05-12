@@ -1,13 +1,11 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Button, Text, View, StyleSheet } from 'react-native';
 
-type Props = {};
-
-export default function ScreenA(props: Props) {
-  console.log(props);
+export default function ScreenA({navigation}) {
   return (
     <View style={{flex:1, backgroundColor: 'blue', alignItems: 'center', justifyContent: 'center'}} >
-      <Text>ScreenA, with backgroundColor: 'blue'</Text>
+      <Text style={{color: 'white'}}>ScreenA, with backgroundColor: 'blue'</Text>
+      <Button title={"navigate to: Screen B"} onPress={() => navigation.navigate('screenB')} />
     </View>
   );
 }
